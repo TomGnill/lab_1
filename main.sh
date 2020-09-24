@@ -62,14 +62,14 @@ fi
     exit 0
 ;;
 strlen)
-if [ "str_er" ="1" ]; then
+if [ "str_er" = "1" ]; then
  echo"Error: такого действия нет!">&2; exit -5
 fi
     strlen "$2"
     exit 0
 ;;
 log)
-if [ "log_er" ="1" ]; then
+if [ "log_er" = "1" ]; then
  echo"Error: такого действия нет!">&2; exit -5
 fi
     log "var/log/anaconda/X.log"
