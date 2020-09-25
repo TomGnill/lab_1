@@ -29,15 +29,15 @@ case $command in
  s|search)
   if [ "$sea_er" = "1" ]; then
   echo "Error:  действие недоступно" >&2;
-  interactive 
+  interactive
   fi
-  echo"Введите слово или выражение:"; read sea_str
-  echo"Введите директорию поиска:"; read sea_dir
+  echo "Введите директорию поиска:"; read sea_dir
+  echo "Введите выражение:"; read sea_str
  if ! [ -d "$sea_dir" ]; then
-  echo"Error: директории несуществует" >&2;
+  echo "Error: директории несуществует" >&2;
   interactive
 fi
-  search "$sea_str" "$sea_dir"
+  search "$sea_dir" "$sea_str"
   echo " "
   interactive
 ;;
@@ -57,7 +57,7 @@ fi
    echo "Error: действие недоступно" >&2;
    interactive
   fi
-   echo"Введите строку:"; read string
+   echo "Введите строку:"; read string
    strlen  "$string"
    echo " "
    interactive
@@ -67,7 +67,7 @@ fi
    echo"Error: действие недоступно" >&2;
    interactive
   fi
-    log "var/log/anaconda/X.log"
+    log "/var/log/anaconda/X.log"
     echo " "
     interactive
 ;;
