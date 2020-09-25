@@ -72,7 +72,7 @@ log)
 if [ "log_er" = "1" ]; then
  echo"Error: такого действия нет!">&2; exit -5
 fi
-    log "var/log/anaconda/X.log"
+    log "/var/log/anaconda/X.log"
     exit 0
 ;;
 exit)
