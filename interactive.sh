@@ -45,10 +45,10 @@ fi
   if [ "$rev_er" = "1" ]; then
    echo "Error: действие недоступно" >&2;
   interactive
-   echo"Введите название папки с файлом"; read rev_dir1
-   echo"Введите название папки в которую файл будет перенесён"; read rev_dir2
+   echo "Файл ввода:"; read rev_fil1
+   echo "Файл вывода:"; read rev_fil2
   fi
-  reverse "$rev_dir1" "$rev_dir2"
+  reverse "$rev_fil1" "$rev_fil2"
   echo" "
   interactive
 ;;
