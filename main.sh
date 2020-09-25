@@ -56,9 +56,9 @@ fi
 ;;
 reverse)
 if [ "$rev_er" = "1" ]; then
- echo"Error: такого действия нет!">&2; exit -5
+ echo "Error: такого действия нет!">&2; exit -5
 fi
-    reverse" $2" "$3"
+    reverse "$2" "$3"
     exit 0
 ;;
 strlen)
