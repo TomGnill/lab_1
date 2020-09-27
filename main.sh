@@ -39,10 +39,16 @@ if ! [ -f "help.sh" ]; then
  else
 . ./help.sh
 fi
+if [[ -z "$1" ]];then
+echo "Error: вы ничего не передали">&2; exit -6
+fi
 case $1 in
 calc)
 if [ "$calc_er" = "1" ]; then
- echo" Error:такого действия нет!">&2; exit -5
+ echo "Error:такого действия нет!">&2; exit -5
+fi
+if [[ -z "$2" ]]; then
+ echo "Error:вы не передали команду">&2; exit -6
 fi
     calc "$2" "$3" "$4"
     exit 0
