@@ -57,7 +57,7 @@ case $command in
   echo "Error: директории несуществует" >&2;
   interactive
   fi
- s search "$sea_dir" "$sea_str"
+  search "$sea_dir" "$sea_str"
   echo " "
   interactive
 ;;
