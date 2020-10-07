@@ -19,8 +19,8 @@ echo "Error: файл не существует">&2; exit -1
 fi
 if ! [[ -f "$2" ]] ; then
 echo "Error: файл не существует">&2; exit -1
-elif [[ $1 == $2 ]]; then
-echo " Ты всё равно получишь тоже самое">&2 ;exit -2
 fi
- tac $1 > $2
+ rev $1 > tmp
+ tac tmp > $2
+ rm tmp
 }
