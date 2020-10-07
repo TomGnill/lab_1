@@ -36,7 +36,7 @@ case $command in
  fi
  echo "Ответ:"; calc "$calc_command" "$first" "$second"
  echo " "
- interactve
+ interactive
 ;;
  s|search)
   if [ "$sea_er" = "1" ]; then
@@ -57,7 +57,7 @@ case $command in
   echo "Error: директории несуществует" >&2;
   interactive
   fi
- s search "$sea_dir" "$sea_str"
+  search "$sea_dir" "$sea_str"
   echo " "
   interactive
 ;;
@@ -85,7 +85,7 @@ case $command in
    echo "Error: действие недоступно" >&2;
    interactive
   fi
-   echo "Введите строку:"; read string
+   echo "Введите строку:"; read -r string
    if [[ -z "string" ]]; then
    echo "Error: вы не передали строку">&2; exit -2
    interactive
