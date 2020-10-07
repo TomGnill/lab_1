@@ -36,7 +36,7 @@ case $command in
  fi
  echo "Ответ:"; calc "$calc_command" "$first" "$second"
  echo " "
- interactve
+ interactive
 ;;
  s|search)
   if [ "$sea_er" = "1" ]; then
