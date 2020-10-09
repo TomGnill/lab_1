@@ -85,12 +85,16 @@ case $command in
    echo "Error: действие недоступно" >&2;
    interactive
   fi
-   echo "Введите строку:"; read -r string
-   if [[ -z "string" ]]; then
+   echo "Введите строку:"; read  string
+   eval "str=($string)"
+   if [[ -z "str" ]]; then
+   echo "0"
+	fi
+   if [[ -z $string ]]; then
    echo "Error: вы не передали строку">&2; exit -2
    interactive
    fi
-   strlen  "$string"
+   strlen  "$str"
    echo " "
    interactive
 ;;
